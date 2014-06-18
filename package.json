@@ -1,0 +1,33 @@
+{
+  "name": "pff",
+  "version": "0.0.0",
+  "description": "PrintF Ftw  ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:floatdrop/pff.git"
+  },
+  "keywords": [
+    "printf",
+    "format",
+    "string"
+  ],
+  "author": "Vsevolod Strukchinsky <floatdrop@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/floatdrop/pff/issues"
+  },
+  "homepage": "https://github.com/floatdrop/pff",
+  "devDependencies": {
+    "gulp": "^3.8.1",
+    "gulp-jshint": "^1.6.3",
+    "gulp-mocha": "^0.4.1",
+    "gulp-watch": "^0.6.6-1",
+    "mocha": "^1.20.1",
+    "run-sequence": "^0.3.6",
+    "should": "^4.0.4"
+  }
+}
