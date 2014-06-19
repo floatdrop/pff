@@ -5,28 +5,34 @@ __No more words, show me the numbers!__
 
 ```bash
                       pff
-       1,486,418 op/s » tiny (prod)
-         478,850 op/s » short (prod)
-         709,008 op/s » tiny (rand)
-         371,153 op/s » short (rand)
+       2,441,764 op/s » tiny (prod)
+         801,082 op/s » short (prod)
+       1,166,098 op/s » tiny (rand)
+         631,365 op/s » short (rand)
 
                       split
-       1,178,397 op/s » tiny (prod)
-         374,882 op/s » short (prod)
-         375,813 op/s » tiny (rand)
-         234,926 op/s » short (rand)
+       2,114,952 op/s » tiny (prod)
+         802,989 op/s » short (prod)
+         865,586 op/s » tiny (rand)
+         543,494 op/s » short (rand)
 
                       indexOf
-         895,898 op/s » tiny (prod)
-         281,566 op/s » short (prod)
-         612,692 op/s » tiny (rand)
-         340,322 op/s » short (rand)
+       2,022,874 op/s » tiny (prod)
+         632,910 op/s » short (prod)
+       1,403,645 op/s » tiny (rand)
+         723,594 op/s » short (rand)
 
-                      printf
-          39,488 op/s » tiny (prod)
-          15,591 op/s » short (prod)
-          37,811 op/s » tiny (rand)
-          20,382 op/s » short (rand)
+                      util.format
+         522,907 op/s » tiny (prod)
+         285,980 op/s » short (prod)
+         468,036 op/s » tiny (rand)
+         319,494 op/s » short (rand)
+
+                      node-printf
+          57,178 op/s » tiny (prod)
+          23,387 op/s » short (prod)
+          52,155 op/s » tiny (rand)
+          30,923 op/s » short (rand)
 ```
 
 Run yourself to get numbers relevant to your hardware:
@@ -51,7 +57,7 @@ console.log(pff('%s world from %d year!', 'Hello', 2014.7));
 | ------------: | --------------------- | --------------------------- | ---------------- |
 | **%s**        | String                | `pff('Hello %s', 'world')`  | `'Hello world'`  |
 | **%d**        | Floored number        | `pff('My age is %d', 13.2)` | `'My age is 13'` |
-| **%%**        | Percent               | `pff('100%%s cool!')`       | `'100%s cool!'`  |           
+| **%%**        | Percent               | `pff('100%%s cool!')`       | `'100%s cool!'`  |
 
 Not much, but hey! - it's fast!
 

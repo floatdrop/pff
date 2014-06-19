@@ -20,4 +20,5 @@ function tests (func) {
 suite('pff', tests.bind(null, pff));
 suite('split', tests.bind(null, require('./split.js')));
 suite('indexOf', tests.bind(null, require('./indexOf.js')));
-suite('printf', tests.bind(null, require('printf')));
+suite('util.format', tests.bind(null, require('util').format));
+suite('node-printf', tests.bind(null, require('printf')));
