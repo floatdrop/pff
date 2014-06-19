@@ -26,8 +26,8 @@ describe('specifiers', function () {
         pff('one %s three', 'two').should.equal('one two three');
     });
 
-    it('should substitute only patterns with defined values', function () {
-        pff('one two %s %s', 'three').should.equal('one two three %s');
+    it('should substitute only patterns with defined values, otherwise - undefined', function () {
+        pff('one two %s %s', 'three').should.equal('one two three undefined');
     });
 
     it('should ignore additional values for substitution', function () {

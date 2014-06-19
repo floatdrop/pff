@@ -5,20 +5,19 @@ var pff = require('..');
 var utils = require('./utils.js');
 
 function tests (func) {
-    bench('tiny (production)', function () {
+    bench('tiny (prod)', function () {
         func('/i/%s/%s/%s/carousel.%d.jpg', 'some', 'folder', 'with', 5);
     });
 
-    bench('short (production)', function () {
+    bench('short (prod)', function () {
         func('feature.%s.%s.%s-feature.%s.%s.%s-feature.%s.%s.%s-feature.%s.%s.%s-feature.%s.%s.description', 'easyinterface', 'smartsearch', 'description', 'easyinterface', 'smartsearch', 'description', 'easyinterface', 'smartsearch', 'description', 'easyinterface', 'smartsearch', 'description', 'easyinterface', 'smartsearch');
     });
 
-    bench('tiny (5)', utils.makeBench(func, 5));
-    bench('short (10)', utils.makeBench(func, 10));
-    bench('medium (100)', utils.makeBench(func, 100));
+    bench('tiny (rand)', utils.makeBench(func, 5));
+    bench('short (rand)', utils.makeBench(func, 10));
 }
 
 suite('pff', tests.bind(null, pff));
+suite('split', tests.bind(null, require('./split.js')));
+suite('indexOf', tests.bind(null, require('./indexOf.js')));
 suite('printf', tests.bind(null, require('printf')));
-suite('printf1', tests.bind(null, require('./printf1.js')));
-suite('printf2', tests.bind(null, require('./printf2.js')));

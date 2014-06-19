@@ -1,26 +1,39 @@
 'use strict';
 
+module.exports = function pff(str) {
+    var strLen = str.length,
+        a = 1,
+        start = 0,
+        end = -1,
+        res = '';
 
-module.exports = function (ptrn) {
-    var result = '';
-    var idx = 0;
-    var lastIdx = -1;
+    for (var i = 0; i < strLen; i++) {
+        var l = str[i];
 
-    for (var current = 1; current < arguments.length; current++) {
-        idx = ptrn.indexOf('%', lastIdx);
-        if (idx === -1) { break; }
-        if (ptrn[idx + 1] === 's' || ptrn[idx + 1] === 'd') {
-            result += ptrn.substring(lastIdx, idx);
-            result += (ptrn[idx + 1] === 'd') ? Math.floor(arguments[current]) : arguments[current];
-            lastIdx = idx + 2;
-        } else {
-            result += ptrn.substring(lastIdx, idx + 2);
-            lastIdx = idx + 2;
-            current--;
+        if (l === '%') {
+            end = i;
+            continue;
+        }
+
+        if (end > -1) {
+            if (l === 's' || l === 'd') {
+                var value = arguments[a++];
+
+                if (l === 'd') {
+                    value = Math.floor(value);
+                }
+
+                res += str.substring(start, end);
+                res += value;
+                start = i + 1;
+            }
+            end = -1;
         }
     }
 
-    result = result + ptrn.substring(lastIdx);
+    if (start < strLen) {
+        res += str.substring(start);
+    }
 
-    return result;
+    return res;
 };

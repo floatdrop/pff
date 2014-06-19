@@ -1,8 +1,10 @@
-module.exports = function printf2_(str) {
+'use strict';
+
+module.exports = function split(str) {
     var a = 1,
         res = '';
 
-    var parts = (str + '').split('%'),
+    var parts = str.split('%'),
         len = parts.length;
 
     if (len > 0) { res += parts[0]; }
@@ -18,5 +20,5 @@ module.exports = function printf2_(str) {
         res += parts[i].substring(1);
     }
 
-    return res;
+    return res.toUpperCase();
 };
