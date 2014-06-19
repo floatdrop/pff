@@ -20,7 +20,7 @@ module.exports = function (ptrn) {
         }
     }
 
-    result += ptrn.substring(lastIdx);
+    result = result + ptrn.substring(lastIdx);
 
     return result;
 };

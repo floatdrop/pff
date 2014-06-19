@@ -1,27 +1,22 @@
 module.exports = function printf2(str) {
     var a = 1,
-        res = [];
+        res = '';
 
     var parts = (str + '').split('%'),
-        len = parts.length,
+        len = parts.length;
 
-        s = 's',
-        d = 'd';
-
-    len > 0 && res.push(parts[0]);
+    if (len > 0) { res += parts[0]; }
 
     for (var i = 1; i < len; i++) {
-        var part = parts[i],
-            first = part[0];
-
-        if (first === s || first === d) {
+        if (parts[i][0] === 's' || parts[i][0] === 'd') {
             var value = arguments[a++];
-
-            res.push(first === d ? ~~value : value);
+            res += parts[i][0] === 'd' ? Math.floor(value) : value;
+        } else {
+            res += '%' + (parts[i][0]||'');
         }
 
-        res.push(part.substring(1));
+        res += parts[i].substring(1);
     }
 
-    return res.join('');
+    return res;
 };

@@ -26,7 +26,7 @@
     "quotmark": "single",
     "indent": 4,
     "maxerr": 5,
-    "maxdepth": 2,
+    "maxdepth": 5,
     "maxstatements": 25,
-    "maxcomplexity": 5
+    "maxcomplexity": 25
 }
