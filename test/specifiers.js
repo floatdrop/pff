@@ -6,6 +6,14 @@ require('should');
 var pff = require('..');
 
 describe('specifiers', function () {
+    it('should preserve % in pattern', function () {
+        pff('%s % %s', 'one', 'two').should.equal('one % two');
+    });
+
+    it('should preserve % in pattern', function () {
+        pff('%s %% %s', 'one', 'two').should.equal('one %% two');
+    });
+
     it('should substitute once in pattern', function () {
         pff('%s', 'result').should.equal('result');
     });
