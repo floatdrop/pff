@@ -1,4 +1,4 @@
-module.exports = function printf2(str) {
+module.exports = function printf2_(str) {
     var a = 1,
         res = '';
 

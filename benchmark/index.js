@@ -19,5 +19,6 @@ function tests (func) {
 }
 
 suite('pff', tests.bind(null, pff));
-//suite('printf', tests.bind(null, require('printf')));
+suite('printf', tests.bind(null, require('printf')));
+suite('printf1', tests.bind(null, require('./printf1.js')));
 suite('printf2', tests.bind(null, require('./printf2.js')));
