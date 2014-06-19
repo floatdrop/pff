@@ -10,7 +10,7 @@ module.exports = function () {
         idx = arguments[0].indexOf('%', lastIdx);
         if (arguments[0][idx + 1] === 's' || arguments[0][idx + 1] === 'd') {
             result += arguments[0].substring(lastIdx, idx);
-            result += arguments[current];
+            result += (arguments[0][idx + 1] === 'd') ? Math.floor(arguments[current]) : arguments[current];
             lastIdx = idx + 2;
         } else {
             current--;
