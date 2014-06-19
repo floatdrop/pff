@@ -1,5 +1,5 @@
 # pff [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
-> Minimal printf realization
+> Minimal printf implementation
 
 __No more words, show me the numbers!__
 
