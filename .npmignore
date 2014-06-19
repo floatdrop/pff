@@ -2,4 +2,7 @@ test/
 .DS_Store
 lib-cov
 coverage.html
+example.js
+v8.log
+.d8_history
 html-report
