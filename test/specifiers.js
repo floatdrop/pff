@@ -31,6 +31,10 @@ describe('specifiers', function () {
     });
 
     it('should substitute %d in the middle of pattern', function () {
-        pff('one %d three', 2).should.equal('one 2 three');
+        pff('one %d three', 2.4).should.equal('one 2 three');
+    });
+
+    it('should substitute %d with flooring', function () {
+        pff('one %d three', 2.8).should.equal('one 2 three');
     });
 });
