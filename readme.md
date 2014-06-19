@@ -45,6 +45,14 @@ console.log(pff('%s world from %d year!', 'Hello', 2014.7));
 // Hello world from 2014 year!
 ```
 
+## Specifiers
+
+| Specifier     | What it does          | Example                   | Result         |
+| ------------- | --------------------- | ------------------------- | -------------- |
+| %s            | String                | pff('Hello %s', 'world')  | 'Hello world'  |
+| %d            | Floored number        | pff('My age is %d', 13.2) | 'My age is 13' |
+| %%            | Percent               | pff('100%%s cool!')       | '100%s cool!'  |           
+
 # License
 
 MIT (c) 2014 Vsevolod Strukchinsky (floatdrop@gmail.com)

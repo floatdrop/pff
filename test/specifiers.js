@@ -10,8 +10,8 @@ describe('specifiers', function () {
         pff('%s % %s', 'one', 'two').should.equal('one % two');
     });
 
-    it('should preserve % in pattern', function () {
-        pff('%s %% %s', 'one', 'two').should.equal('one %% two');
+    it('should replace %% with %', function () {
+        pff('%s %% %s', 'one', 'two').should.equal('one % two');
     });
 
     it('should substitute once in pattern', function () {
@@ -45,4 +45,9 @@ describe('specifiers', function () {
     it('should substitute %d with flooring', function () {
         pff('one %d three', 2.8).should.equal('one 2 three');
     });
+
+    it('should substitute %% with %', function () {
+        pff('one %%s three', 'wow').should.equal('one %s three');
+    });
+
 });

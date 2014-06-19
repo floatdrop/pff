@@ -8,26 +8,30 @@ module.exports = function pff(str) {
         res = '';
 
     for (var i = 0; i < strLen; i++) {
-        var l = str[i];
-
-        if (l === '%') {
-            end = i;
+        if (str[i] !== '%') {
             continue;
         }
 
-        if (end > -1) {
-            if (l === 's' || l === 'd') {
-                var value = arguments[a++];
+        end = i;
+        var modifier = str[i + 1];
 
-                if (l === 'd') {
-                    value = Math.floor(value);
-                }
+        if (modifier === 's' || modifier === 'd') {
+            var substitution = arguments[a++];
 
-                res += str.substring(start, end);
-                res += value;
-                start = i + 1;
+            if (modifier === 'd') {
+                substitution = Math.floor(substitution);
             }
-            end = -1;
+
+            res += str.substring(start, end);
+            res += substitution;
+            start = i + 2;
+        }
+
+        if (modifier === '%') {
+            res += str.substring(start, end);
+            res += '%';
+            start = i + 2;
+            i++;
         }
     }
 
