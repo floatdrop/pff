@@ -2,23 +2,21 @@
 
 
 module.exports = function () {
-    var pattern = arguments[0];
-
     var result = '';
     var idx = 0;
 
     for (var current = 1; current < arguments.length && idx !== -1; current++) {
-        idx = pattern.indexOf('%');
-        if (pattern[idx + 1] === 's' || pattern[idx + 1] === 'd') {
-            result += pattern.slice(0, idx);
+        idx = arguments[0].indexOf('%');
+        if (arguments[0][idx + 1] === 's' || arguments[0][idx + 1] === 'd') {
+            result += arguments[0].slice(0, idx);
             result += arguments[current];
-            pattern = pattern.slice(idx + 2);
+            arguments[0] = arguments[0].slice(idx + 2);
         } else {
             current--;
         }
     }
 
-    result += pattern;
+    result += arguments[0];
 
     return result;
 };
