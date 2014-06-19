@@ -1,6 +1,6 @@
 {
   "name": "pff",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "PrintF Ftw  ",
   "main": "index.js",
   "scripts": {
