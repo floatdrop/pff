@@ -3,37 +3,7 @@
 
 __No more words, show me the numbers!__
 
-```bash
-                      pff
-       2,441,764 op/s » tiny (prod)
-         801,082 op/s » short (prod)
-       1,166,098 op/s » tiny (rand)
-         631,365 op/s » short (rand)
-
-                      split
-       2,114,952 op/s » tiny (prod)
-         802,989 op/s » short (prod)
-         865,586 op/s » tiny (rand)
-         543,494 op/s » short (rand)
-
-                      indexOf
-       2,022,874 op/s » tiny (prod)
-         632,910 op/s » short (prod)
-       1,403,645 op/s » tiny (rand)
-         723,594 op/s » short (rand)
-
-                      util.format
-         522,907 op/s » tiny (prod)
-         285,980 op/s » short (prod)
-         468,036 op/s » tiny (rand)
-         319,494 op/s » short (rand)
-
-                      node-printf
-          57,178 op/s » tiny (prod)
-          23,387 op/s » short (prod)
-          52,155 op/s » tiny (rand)
-          30,923 op/s » short (rand)
-```
+![image](https://cloud.githubusercontent.com/assets/365089/3349222/3717f6fa-f959-11e3-88f2-62f68b00c4b4.png)
 
 Run yourself to get numbers relevant to your hardware:
 

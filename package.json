@@ -1,7 +1,7 @@
 {
   "name": "pff",
   "version": "0.1.1",
-  "description": "PrintF Ftw  ",
+  "description": "Minimal implementation of printf, which is really fast",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
@@ -31,6 +31,7 @@
     "mocha": "^1.20.1",
     "printf": "^0.2.0",
     "run-sequence": "^0.3.6",
-    "should": "^4.0.4"
+    "should": "^4.0.4",
+    "sprint": "^0.3.1"
   }
 }

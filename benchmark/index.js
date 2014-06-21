@@ -21,4 +21,5 @@ suite('pff', tests.bind(null, pff));
 suite('split', tests.bind(null, require('./split.js')));
 suite('indexOf', tests.bind(null, require('./indexOf.js')));
 suite('util.format', tests.bind(null, require('util').format));
+suite('sprint', tests.bind(null, require('sprint')));
 suite('node-printf', tests.bind(null, require('printf')));
