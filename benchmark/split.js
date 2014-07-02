@@ -20,5 +20,5 @@ module.exports = function split(str) {
         res += parts[i].substring(1);
     }
 
-    return res.toUpperCase();
+    return res;
 };
