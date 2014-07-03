@@ -3,7 +3,7 @@
 
 __No more words, show me the numbers!__
 
-![image](https://cloud.githubusercontent.com/assets/365089/3349222/3717f6fa-f959-11e3-88f2-62f68b00c4b4.png)
+![image](https://cloud.githubusercontent.com/assets/365089/3465905/427d6f24-0274-11e4-9348-216df8f05060.png)
 
 Run yourself to get numbers relevant to your hardware:
 

@@ -13,8 +13,11 @@ module.exports = function split(str) {
         if (parts[i][0] === 's' || parts[i][0] === 'd') {
             var value = arguments[a++];
             res += parts[i][0] === 'd' ? Math.floor(value) : value;
+        } else if (parts[i][0]) {
+            res += '%' + parts[i][0];
         } else {
-            res += '%' + (parts[i][0]||'');
+            i++;
+            res += '%' + parts[i][0];
         }
 
         res += parts[i].substring(1);

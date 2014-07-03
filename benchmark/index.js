@@ -1,7 +1,6 @@
 /*global suite, bench */
 'use strict';
 
-var pff = require('..');
 var utils = require('./utils.js');
 
 function tests (func) {
@@ -17,7 +16,7 @@ function tests (func) {
     bench('short (rand)', utils.makeBench(func, 10));
 }
 
-suite('pff', tests.bind(null, pff));
+suite('for', tests.bind(null, require('./for.js')));
 suite('split', tests.bind(null, require('./split.js')));
 suite('indexOf', tests.bind(null, require('./indexOf.js')));
 suite('util.format', tests.bind(null, require('util').format));

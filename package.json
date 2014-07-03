@@ -2,7 +2,7 @@
   "name": "pff",
   "version": "0.1.1",
   "description": "Minimal implementation of printf, which is really fast",
-  "main": "index.js",
+  "main": "benchmark/split.js",
   "scripts": {
     "test": "mocha",
     "bench": "matcha benchmark/index.js"
