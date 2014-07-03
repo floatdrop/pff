@@ -1,6 +1,6 @@
 {
   "name": "pff",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Minimal implementation of printf, which is really fast",
   "main": "benchmark/split.js",
   "scripts": {
