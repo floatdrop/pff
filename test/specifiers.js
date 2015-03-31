@@ -60,4 +60,8 @@ describe('pff', function () {
         pff('one %%s three', 'wow').should.equal('one %s three');
     });
 
+    it('should substitute undefined and null', function () {
+        pff('one %s three', undefined).should.equal('one undefined three');
+        pff('one %s three', null).should.equal('one null three');
+    });
 });
