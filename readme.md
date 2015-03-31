@@ -8,8 +8,9 @@ __No more words, show me the numbers!__
 Run yourself to get numbers relevant to your hardware:
 
 ```bash
+$ npm i -g matcha printf sprint
 $ npm i
-$ npm run bench
+$ matcha benchmark/index.js
 ```
 
 ## Usage

@@ -3,9 +3,11 @@
   "version": "0.2.0",
   "description": "Minimal implementation of printf, which is really fast",
   "main": "benchmark/split.js",
+  "files": [
+    "benchmark/split.js"
+  ],
   "scripts": {
-    "test": "mocha",
-    "bench": "matcha benchmark/index.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -23,15 +25,7 @@
   },
   "homepage": "https://github.com/floatdrop/pff",
   "devDependencies": {
-    "gulp": "^3.8.1",
-    "gulp-jshint": "^1.6.3",
-    "gulp-mocha": "^0.4.1",
-    "gulp-watch": "^0.6.6-1",
-    "matcha": "^0.5.0",
     "mocha": "^1.20.1",
-    "printf": "^0.2.0",
-    "run-sequence": "^0.3.6",
     "should": "^4.0.4",
-    "sprint": "^0.3.1"
   }
 }
